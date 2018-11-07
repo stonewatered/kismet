@@ -62,7 +62,7 @@ sql = "SELECT {} FROM {}".format(replacements["srccolumns"], replacements["srcta
 # if select != "":
 #     sql = sql + " AND " + select
 
-with open(results.outfile, 'wb') as csvfile:
+with open(results.outfile, 'w') as csvfile:
     csvWriter = csv.writer(csvfile, delimiter='\t')
 
     c = db.cursor()
